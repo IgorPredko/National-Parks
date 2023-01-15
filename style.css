@@ -1,0 +1,1129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #000;
+  position: sticky;
+}
+
+.main_img_wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header_nav_burger {
+  position: absolute;
+  left: 0;
+  color: orange;
+  margin: 10px;
+  font-size: 2em;
+  display: none;
+}
+
+.menu {
+  margin: 5px;
+  vertical-align: bottom;
+}
+
+.fa-circle-user {
+  color: orange;
+  font-size: 2em;
+  position: absolute;
+  margin: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.header_nav_registration {
+  display: flex;
+  justify-self: end;
+}
+
+.header_nav_menu ul {
+  display: flex;
+  font-size: 1.5em;
+}
+
+ul li {
+  padding: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: orange;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.menu_link {
+  position: relative;
+}
+
+.menu_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: currentColor;
+
+  transform: scaleX(0.15);
+  transform-origin: left;
+}
+
+.menu_link:hover:after {
+  transform: scaleX(1);
+  width: 100%;
+  transition: transform 0.3s ease-in;
+}
+
+.banner {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 60px;
+}
+
+.main_img {
+  width: 120%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: zoom-out 3s linear infinite;
+}
+
+@keyframes zoom-out {
+  100% {
+    width: 100%;
+  }
+}
+
+.text-box {
+  width: 600px;
+  position: absolute;
+  top: 30%;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.fa-canadian-maple-leaf {
+  font-size: 8em;
+  padding: 5px;
+  color: red;
+}
+
+.text-box h1 {
+  margin-bottom: 20px;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: orange;
+}
+
+.text-box p {
+  font-size: 18px;
+  line-height: 19px;
+  margin-top: 50px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.author {
+  font-family: "Square Peg", cursive;
+  line-height: 30px;
+}
+
+.underline {
+  background: #fff;
+  height: 2px;
+  width: 40%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.banner1 {
+  animation: slide1 12s linear infinite;
+}
+
+.banner2 {
+  animation: slide2 12s linear infinite;
+}
+
+.banner3 {
+  animation: slide3 12s linear infinite;
+}
+
+.banner4 {
+  animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1 {
+  0% {
+    visibility: visible;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: visible;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes slide4 {
+  0% {
+    visibility: hidden;
+  }
+
+  25% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  75% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .main_img_wrapper {
+    width: 100%;
+  }
+
+  .text-box p {
+    font-size: 0.7em;
+    padding: 10px;
+  }
+
+  .author {
+    font-size: 0.5em;
+  }
+
+  .banner2,
+  .banner3,
+  .banner4 {
+    display: none;
+  }
+
+  .main_img,
+  .banner {
+    animation: none;
+  }
+
+  .text-box {
+    width: 80%;
+    position: absolute;
+    top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .fa-canadian-maple-leaf {
+    font-size: 3em;
+    padding: 5px;
+    color: red;
+  }
+
+  .header_nav_burger {
+    display: block;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .fa-circle-user {
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 5px;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .visible {
+    display: flex;
+  }
+
+  .header_nav_menu {
+    margin: 25px;
+  }
+
+  .header_nav_menu ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  ul li {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border: 2px solid orange;
+    border-radius: 20px;
+    margin: 5px;
+  }
+}
+
+/* //////////////////////////////2//////////////////////////// */
+
+.main {
+  color: orange;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #333232,
+    #646362,
+    #9a9897,
+    #d2d2cf
+  );
+}
+
+.main_content {
+  margin-top: 150px;
+  color: #fff;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.5em;
+  color: orange;
+  width: 100%;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+
+.underline_content {
+  background: #fff;
+  height: 1px;
+  width: 40%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 10px;
+  background: #fff;
+}
+
+.main_text {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: #d2d2cf;
+  padding: 20px;
+  color: #000;
+  font-family: "Lora", serif;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-family: "Fjalla One", sans-serif;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.main_text_images {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "one one one two"
+    "one one one two"
+    "three three four four"
+    "three three four four";
+  height: 100vh;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.main_text_img1 {
+  grid-area: one;
+  background-image: url(img/new1.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  font-size: 29px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_text_img1:before:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  color: #000;
+  width: 30px;
+}
+
+.main_text_img2 {
+  grid-area: two;
+  background-image: url(img/new2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main_text_img3 {
+  grid-area: three;
+  background-image: url(img/new4.jpg);
+  background-position: center;
+  background-size: cover;
+  border-bottom-left-radius: 20px;
+}
+
+.main_text_img4 {
+  grid-area: four;
+  background-image: url(img/new5.jpg);
+  background-position: center;
+  background-size: cover;
+  border-bottom-right-radius: 20px;
+}
+
+.main_images_title {
+  font-size: 9em;
+  font-family: "Fjalla One", sans-serif;
+  text-shadow: 3px 3px 3px #000;
+  position: absolute;
+  color: orange;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 1100px) {
+  .main_images_title {
+    display: none;
+  }
+}
+
+/* ///////////////////////////////////////////////3///////////////////////////////////////////////////////////// */
+.main_places {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d2d2cf;
+}
+
+.main_title_wrapper {
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_places_title {
+  margin-top: 70px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+  background-image: linear-gradient(
+    to bottom,
+    #000000,
+    #333232,
+    #646362,
+    #9a9897,
+    #d2d2cf
+  );
+}
+
+.slider {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 500px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 500px;
+  scroll-snap-align: center;
+  margin-right: 0px;
+  box-sizing: border-box;
+  background: white;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+.slide__text {
+  font-size: 1.5em;
+  color: orange;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 1.2px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.slide a {
+  background: none;
+  border: none;
+}
+
+a.slide__prev,
+.slider::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+  position: absolute;
+  top: 48%;
+  width: 35px;
+  height: 35px;
+  border: solid orange;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slider__nav {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 5%;
+  width: 40%;
+  margin-right: 30%;
+  margin-left: 30%;
+}
+
+#slides__1 {
+  background-image: url(img/slides/banff_national_park.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slides__2 {
+  background-image: url(img/slides/Cape\ Breton.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slides__3 {
+  background-image: url(img/slides/Hopewell\ Rocks\ Provincial\ Park.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slides__4 {
+  background-image: url(img/slides/jasper_national_park.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slides__5 {
+  background-image: url(img/slides/PEI_national_park.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#slides__6 {
+  background-image: url(img/slides/Waterton\ Lakes\ National\ Park.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* /////////////////////////////////////////////////4//////////////////////////////////////////////// */
+
+.main_hikes_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.main_hikes_title {
+  margin-top: 70px;
+}
+
+.hikes_content {
+  background-image: url(img/pine_tree.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hikes_content_cards {
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  color: #fff;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.5px);
+  width: 100%;
+}
+
+.a_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hikes_content_card {
+  height: 400px;
+  width: 30%;
+  background-color: #d2d2cf;
+  margin-top: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px #000;
+}
+
+.card_one {
+  background-image: url(img/activities/hiking3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_two {
+  background-image: url(img/activities/kayaking1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card_three {
+  background-image: url(img/activities/people_and_campfire.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.hikes_content_title {
+  background-color: #000;
+  color: orange;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.hikes_content_text {
+  font-family: "Roboto Mono", monospace;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 25px;
+  font-size: 1em;
+  opacity: 0;
+  height: 350px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.hikes_content_text .fa-canadian-maple-leaf {
+  font-size: 3em;
+}
+
+.hikes_content_card .hikes_content_text:hover {
+  opacity: 1;
+  transition: 1.2s;
+}
+
+@media all and (max-width: 1100px) {
+  .hikes_content_cards {
+    justify-content: space-between;
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hikes_content_cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hikes_content_card {
+    width: 80%;
+    margin: 10px;
+  }
+
+  .hikes_content_text {
+    height: 88%;
+  }
+}
+
+/* //////////////////////////////////5//////////////////////////////////////// */
+.main_map {
+  background-color: #000;
+}
+
+.main_map_title {
+  margin-top: 70px;
+  background-color: #000;
+}
+
+.main_map_content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.parks_map {
+  margin: 0 auto;
+  display: flex;
+}
+
+.main_map_line {
+  background-image: linear-gradient(to bottom, #000000, #333232);
+  height: 100px;
+}
+
+.main_map_line:first-child {
+  background-image: linear-gradient(to top, #000000, #333232);
+}
+
+@media all and (max-width: 1100px) {
+  .parks_map {
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+  }
+}
+
+/* ////////////////////////////////6////////////////////////////////////////// */
+
+.main_blog {
+  background-image: url(img/foggy_footer.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.main_blog_title {
+  margin-top: 70px;
+  background-color: #000;
+}
+
+.main_blog_wrapper {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.blog_content_wrapper {
+  display: grid;
+  grid-template-areas:
+    "block1 block1 block2 block2 block3 block3"
+    "block1 block1 block2 block2 block3 block3"
+    "block1 block1 block2 block2 block4 block4"
+    "block1 block1 block2 block2 block4 block4";
+  margin: 0 auto;
+  width: 80%;
+  height: 70vh;
+  gap: 10px;
+  margin-bottom: 100px;
+  margin-top: 150px;
+}
+
+.blog_content_block {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 2px 6px #000;
+}
+
+.blog_content_block1 {
+  grid-area: block1;
+  background-image: url(img/mushroom.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.block_title {
+  font-size: 1.5em;
+  width: auto;
+  height: auto;
+  color: orange;
+  font-family: "Fjalla One", sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.block_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.block_button a {
+  text-decoration: none;
+  font-family: "Fjalla One", sans-serif;
+  background-color: #000;
+  color: orange;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1em;
+  border: 1px solid orange;
+  width: 50%;
+}
+
+.block_button a:hover {
+  background-color: orange;
+  color: #000;
+  transition: 1s;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.blog_content_block2 {
+  grid-area: block2;
+  background-image: url(img/tent.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.blog_content_block3 {
+  grid-area: block3;
+  background-image: url(img/trails.jpg);
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 20px;
+}
+
+.blog_content_block4 {
+  grid-area: block4;
+  border-bottom-right-radius: 20px;
+}
+
+.block4_button {
+  margin-top: 40%;
+}
+
+.footer_content {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fjalla One", sans-serif;
+  padding: 20px;
+}
+
+.footer_content .footer_content_button {
+  cursor: pointer;
+  margin: 0 5px;
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  color: orange;
+  line-height: 60px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.footer_content .footer_content_button .footer_content_icon {
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.footer_content .footer_content_button .footer_content_icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.footer_content .footer_content_button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+.footer_content .footer_content_button:hover {
+  width: 200px;
+  border: 1.5px solid orange;
+}
+
+.footer_text {
+  color: orange;
+  font-family: "Roboto Mono", monospace;
+  margin: 5px 5px 5px 50px;
+}
+
+@media all and (max-width: 1100px) {
+  .blog_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 80%;
+  }
+
+  .blog_content_block {
+    border-radius: 20px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .block4_button {
+    margin: 0 auto;
+  }
+
+  .blog_content_block4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer_content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ///////////////////////////////button/////////////////////////////////// */
+
+.to_the_top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: orange;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+}
+
+/* ////////////////////////////////////form/////////////////////////////// */
+
+form {
+  border: 2px solid orange;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 80%;
+  background-color: #000;
+  margin-top: 70px;
+  border-radius: 20px;
+}
+
+.container {
+  padding: 16px;
+  color: orange;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #d2d2cf;
+  color: #000;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.hide_form {
+  display: none;
+}
+
+.show_form {
+  display: block;
+}
